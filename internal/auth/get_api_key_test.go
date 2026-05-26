@@ -24,7 +24,7 @@ func TestGetApiKeyForWhenAuthHeaderIsMalformed(t *testing.T) {
 }
 
 func TestGetApiKeyForWhenNoApiKeyIsProvided(t *testing.T) {
-	authHeader := http.Header{"Authorization": {"ApiKey "}}
+	authHeader := http.Header{"Authorization": {"ApiKey"}}
 	_, err := GetAPIKey(authHeader)
 
 	if err == nil {
